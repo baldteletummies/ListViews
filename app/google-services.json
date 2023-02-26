@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "751504834107",
+    "project_id": "criteriaia",
+    "storage_bucket": "criteriaia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751504834107:android:1c616e0821d0e693c2e61e",
+        "android_client_info": {
+          "package_name": "app.ij.listviews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "751504834107-khh7l8u2kaonrd52v1oudq2ehpa4m6h2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsYU88Dp1Hsam2-eI3JZZo6In7wqeZ8Ho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "751504834107-khh7l8u2kaonrd52v1oudq2ehpa4m6h2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
