@@ -1,40 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="100sp"
-        android:background="#F1FEFF"
-        android:id="@+id/header"
-        >
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Enter item here"
-            android:layout_centerInParent="true"
-            android:id="@+id/input"
-            />
-        <ImageView
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            android:layout_toRightOf="@+id/input"
-            android:id="@+id/add"
-            android:layout_marginLeft="7sp"
-            android:src="@drawable/add_item"
-            android:layout_centerVertical="true"
-            />
 
-    </RelativeLayout>
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Enter item here"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.091" />
+
+    <ImageView
+        android:id="@+id/add"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_marginLeft="4dp"
+        android:src="@drawable/add_item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/input"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
+
+
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="88dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="580dp"
+        android:text="Log Out"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEnterFam"
+        android:layout_width="88dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="580dp"
+        android:text="Join Fam"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnFamList"
+        android:layout_width="92dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="580dp"
+        android:text="Go 2 Fam List"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGenFID"
+        android:layout_width="120dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="580dp"
+        android:text="Generate Fam ID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/header" />
+        android:layout_width="390dp"
+        android:layout_height="440dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input" />
 
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

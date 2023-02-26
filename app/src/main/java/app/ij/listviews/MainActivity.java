@@ -9,6 +9,7 @@ package app.ij.listviews;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.gesture.Gesture;
 import android.media.Image;
 import android.os.Bundle;
@@ -18,10 +19,16 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -38,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
     static ListViewAdapter adapter;
     static ArrayList<String> items;
     static Context context;
+    private DatabaseReference mDatabase;
+    private Button logoutBtn;
+    private FirebaseAuth mAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,15 +61,27 @@ public class MainActivity extends AppCompatActivity {
 
         // add hardcoded items to grocery list
         items = new ArrayList<>();
+        /*
         items.add("Apple");
         items.add("Banana");
         items.add("Orange");
         items.add("Strawberry");
         items.add("Kiwi");
+         */
 
         listView.setLongClickable(true);
         adapter = new ListViewAdapter(this, items);
         listView.setAdapter(adapter);
+
+        logoutBtn= findViewById(R.id.btnLogOut);
+
+        mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+/*
+        DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
+        for(String friend : items) {
+            rootRef.child("friends").child(items.setValue(true);
+ */
 
         // Display the item name when the item's row is clicked
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -92,6 +115,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         loadContent();
+
+        logoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mAuth.signOut();
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+                Toast.makeText(MainActivity.this, "Logout Successful !", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
     }
 
     // function to read grocery list from file and load it into ListView
@@ -157,4 +194,5 @@ public class MainActivity extends AppCompatActivity {
         t = Toast.makeText(context, s, Toast.LENGTH_SHORT);
         t.show();
     }
+
 }

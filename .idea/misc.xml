@@ -8,9 +8,14 @@
         <entry key="app/src/main/res/drawable/copy.xml" value="0.321025641025641" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.321025641025641" />
         <entry key="app/src/main/res/drawable/remove.xml" value="0.321025641025641" />
-        <entry key="app/src/main/res/layout/activity_auth.xml" value="0.14387031408308004" />
+        <entry key="app/src/main/res/layout/activity_auth.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_famlist.xml" value="0.25905797101449274" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2846864093201562" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1503623188405797" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_nav.xml" value="0.2527018871646824" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.2563405797101449" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2563405797101449" />
+        <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.2563405797101449" />
         <entry key="app/src/main/res/layout/list_row.xml" value="0.1503623188405797" />
       </map>
     </option>
